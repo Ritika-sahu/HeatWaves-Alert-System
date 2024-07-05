@@ -25,12 +25,12 @@ The overarching objective of this project is not just to provide a snapshot of t
 
 Our data engineering process can be visualized as a journey through several main steps:
 
-### 1. 📦 Data Collection
+### 1. Data Collection
 - **WMO Data Extraction**: Data was sourced from the embedded Power BI dashboard on the WMO website, a task that presented unique challenges due to its dynamic nature. 
 - **PubMed Data Retrieval**: Leveraged the PubMed API to fetch relevant data, transforming the XML response into a structured DataFrame.
 - **Google Scholar and Google Search**: Scanned Google and Google Scholar using specific keywords to collect research journals and papers.
 
-### 2. 🧹 Data Cleaning & Validation
+### 2. Data Cleaning & Validation
 #### WMO Data:
 - Harmonized data extracted from the WMO website with the provided WMO template, ensuring that country names were spelled correctly and matched the template.
 - Checked for and handled duplicate entries to maintain data integrity.
@@ -41,15 +41,15 @@ Our data engineering process can be visualized as a journey through several main
 - Checked for and handled duplicate entries to ensure data consistency and accuracy.
 - Validated random samples to ensure the accuracy of data extraction from these sources.
 
-### 3. 🧠 Predictive Modeling & Analysis
+### 3. Predictive Modeling & Analysis
 - **PubMed Predictions**: Adopted advanced tokenization techniques using Hugging Face's RobertaTokenizer and utilized a pretrained RoBERTa model to predict the presence of heatwave systems based on abstracts from the PubMed results.
 - **Google Scholar and Google Search Predictions**: Used a Random Forest model to make predictions based on the extracted data.
 - The prediction approach has potential for future improvements with more training data and model fine-tuning.
 
-### 4. 🧩 Data Integration & Final Database Creation
+### 4. Data Integration & Final Database Creation
 - Unified various datasets, including predictions from PubMed, Google Search, and Google Scholar, to create a comprehensive database.
 
-### 5. 📊 Results & Insights
+### 5. Results & Insights
 - Formulated rules for overall prediction, emphasizing the significance of even a single positive prediction.
 - Generated comprehensive summaries capturing research papers per country and detailed nested information.
 
